@@ -1,3 +1,5 @@
+// Copyright 2025 - Swift Software Group, Inc.
+// Before Feb 26, 2025:
 // Copyright 2023 - MinIO, Inc. All rights reserved.
 // Use of this source code is governed by the AGPLv3
 // license that can be found in the LICENSE file.
@@ -14,7 +16,7 @@ import (
 	"io"
 	"log"
 
-	"github.com/minio/kms-go/kes"
+	"github.com/swift-s3/kms-go/kes"
 )
 
 func ExampleNewClient() {

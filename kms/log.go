@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"aead.dev/mtls"
-	pb "github.com/minio/kms-go/kms/protobuf"
+	pb "github.com/swift-s3/kms-go/kms/protobuf"
 )
 
 // StackFrame contains the resolved file and line number

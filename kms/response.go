@@ -1,3 +1,5 @@
+// Copyright 2025 - Swift Software Group, Inc.
+// Before Feb 26, 2025:
 // Copyright 2023 - MinIO, Inc. All rights reserved.
 // Use of this source code is governed by the AGPLv3
 // license that can be found in the LICENSE file.
@@ -12,10 +14,10 @@ import (
 	"time"
 
 	"aead.dev/mtls"
-	"github.com/minio/kms-go/kms/cmds"
-	"github.com/minio/kms-go/kms/internal/headers"
-	"github.com/minio/kms-go/kms/internal/pool"
-	pb "github.com/minio/kms-go/kms/protobuf"
+	"github.com/swift-s3/kms-go/kms/cmds"
+	"github.com/swift-s3/kms-go/kms/internal/headers"
+	"github.com/swift-s3/kms-go/kms/internal/pool"
+	pb "github.com/swift-s3/kms-go/kms/protobuf"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )

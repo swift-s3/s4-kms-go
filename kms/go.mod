@@ -1,6 +1,6 @@
-module github.com/minio/kms-go/kms
+module github.com/swift-s3/kms-go/kms
 
-go 1.22
+go 1.24.1
 
 require (
 	aead.dev/mem v0.2.0

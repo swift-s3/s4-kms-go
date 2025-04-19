@@ -1,3 +1,5 @@
+// Copyright 2025 - Swift Software Group, Inc.
+// Before Feb 26, 2025:
 // Copyright 2023 - MinIO, Inc. All rights reserved.
 // Use of this source code is governed by the AGPLv3
 // license that can be found in the LICENSE file.
@@ -101,10 +103,10 @@ var policyVerifyTests = []struct {
 			},
 		},
 		Requests: map[string]bool{
-			"/v1/key/create/my-key":         false,
-			"/v1/key/create/my-key1":        false,
-			"/v1/key/create/my-minio-key":   true,
-			"/v1/key/create/your-minio-key": true,
+			"/v1/key/create/my-key":           false,
+			"/v1/key/create/my-key1":          false,
+			"/v1/key/create/my-swifts3-key":   true,
+			"/v1/key/create/your-swifts3-key": true,
 		},
 	},
 }
@@ -201,10 +203,10 @@ var policyIsSubsetTests = []struct {
 	{ // 7
 		A: &Policy{
 			Allow: map[string]Rule{
-				"/v1/policy/describe/minio": {},
-				"/v1/policy/show/minio":     {},
-				"/v1/policy/list/minio":     {},
-				"/v1/identity/delete/*":     {},
+				"/v1/policy/describe/swifts3": {},
+				"/v1/policy/show/swifts3":     {},
+				"/v1/policy/list/swifts3":     {},
+				"/v1/identity/delete/*":       {},
 			},
 			Deny: map[string]Rule{
 				"/v1/identity/delete/88*": {},
@@ -212,13 +214,13 @@ var policyIsSubsetTests = []struct {
 		},
 		B: &Policy{
 			Allow: map[string]Rule{
-				"/v1/identity/create/*":     {},
-				"/v1/identity/describe/*":   {},
-				"/v1/identity/list/*":       {},
-				"/v1/identity/delete/*":     {},
-				"/v1/policy/describe/minio": {},
-				"/v1/policy/show/minio":     {},
-				"/v1/policy/list/minio":     {},
+				"/v1/identity/create/*":       {},
+				"/v1/identity/describe/*":     {},
+				"/v1/identity/list/*":         {},
+				"/v1/identity/delete/*":       {},
+				"/v1/policy/describe/swifts3": {},
+				"/v1/policy/show/swifts3":     {},
+				"/v1/policy/list/swifts3":     {},
 			},
 			Deny: map[string]Rule{
 				"/v1/identity/delete/88acf8c3220a69497f2fa1fc7f52f56b9ff2996402d9379a49fbaffe2b56fdfd": {},
@@ -258,10 +260,10 @@ var policyIsSubsetTests = []struct {
 	{ // 11
 		A: &Policy{
 			Allow: map[string]Rule{
-				"/v1/policy/describe/minio": {},
-				"/v1/policy/show/minio":     {},
-				"/v1/policy/list/minio":     {},
-				"/v1/identity/delete/*":     {},
+				"/v1/policy/describe/swifts3": {},
+				"/v1/policy/show/swifts3":     {},
+				"/v1/policy/list/swifts3":     {},
+				"/v1/identity/delete/*":       {},
 			},
 			Deny: map[string]Rule{
 				"/v1/identity/delete/89*": {},
@@ -269,13 +271,13 @@ var policyIsSubsetTests = []struct {
 		},
 		B: &Policy{
 			Allow: map[string]Rule{
-				"/v1/identity/create/*":     {},
-				"/v1/identity/describe/*":   {},
-				"/v1/identity/list/*":       {},
-				"/v1/identity/delete/*":     {},
-				"/v1/policy/describe/minio": {},
-				"/v1/policy/show/minio":     {},
-				"/v1/policy/list/minio":     {},
+				"/v1/identity/create/*":       {},
+				"/v1/identity/describe/*":     {},
+				"/v1/identity/list/*":         {},
+				"/v1/identity/delete/*":       {},
+				"/v1/policy/describe/swifts3": {},
+				"/v1/policy/show/swifts3":     {},
+				"/v1/policy/list/swifts3":     {},
 			},
 			Deny: map[string]Rule{
 				"/v1/identity/delete/88acf8c3220a69497f2fa1fc7f52f56b9ff2996402d9379a49fbaffe2b56fdfd": {},

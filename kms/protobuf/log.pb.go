@@ -310,15 +310,15 @@ func file_log_proto_rawDescGZIP() []byte {
 
 var file_log_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_log_proto_goTypes = []interface{}{
-	(*LogRecord)(nil),             // 0: minio.kms.LogRecord
-	(*LogRecord_StackFrame)(nil),  // 1: minio.kms.LogRecord.StackFrame
-	(*LogRecord_Request)(nil),     // 2: minio.kms.LogRecord.Request
+	(*LogRecord)(nil),             // 0: swifts3.kms.LogRecord
+	(*LogRecord_StackFrame)(nil),  // 1: swifts3.kms.LogRecord.StackFrame
+	(*LogRecord_Request)(nil),     // 2: swifts3.kms.LogRecord.Request
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 }
 var file_log_proto_depIdxs = []int32{
-	3, // 0: minio.kms.LogRecord.Time:type_name -> google.protobuf.Timestamp
-	1, // 1: minio.kms.LogRecord.Trace:type_name -> minio.kms.LogRecord.StackFrame
-	2, // 2: minio.kms.LogRecord.Req:type_name -> minio.kms.LogRecord.Request
+	3, // 0: swifts3.kms.LogRecord.Time:type_name -> google.protobuf.Timestamp
+	1, // 1: swifts3.kms.LogRecord.Trace:type_name -> swifts3.kms.LogRecord.StackFrame
+	2, // 2: swifts3.kms.LogRecord.Req:type_name -> swifts3.kms.LogRecord.Request
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

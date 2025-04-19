@@ -1,3 +1,5 @@
+// Copyright 2025 - Swift Software Group, Inc.
+// Before Feb 26, 2025:
 // Copyright 2023 - MinIO, Inc. All rights reserved.
 // Use of this source code is governed by the AGPLv3
 // license that can be found in the LICENSE file.
@@ -1611,57 +1613,57 @@ func file_response_proto_rawDescGZIP() []byte {
 
 var file_response_proto_msgTypes = make([]protoimpl.MessageInfo, 23)
 var file_response_proto_goTypes = []interface{}{
-	(*ErrResponse)(nil),            // 0: minio.kms.ErrResponse
-	(*VersionResponse)(nil),        // 1: minio.kms.VersionResponse
-	(*ServerStatusResponse)(nil),   // 2: minio.kms.ServerStatusResponse
-	(*ProfileStatusResponse)(nil),  // 3: minio.kms.ProfileStatusResponse
-	(*ClusterStatusResponse)(nil),  // 4: minio.kms.ClusterStatusResponse
-	(*EnclaveStatusResponse)(nil),  // 5: minio.kms.EnclaveStatusResponse
-	(*ListEnclavesResponse)(nil),   // 6: minio.kms.ListEnclavesResponse
-	(*KeyStatusResponse)(nil),      // 7: minio.kms.KeyStatusResponse
-	(*ListKeysResponse)(nil),       // 8: minio.kms.ListKeysResponse
-	(*EncryptResponse)(nil),        // 9: minio.kms.EncryptResponse
-	(*DecryptResponse)(nil),        // 10: minio.kms.DecryptResponse
-	(*GenerateKeyResponse)(nil),    // 11: minio.kms.GenerateKeyResponse
-	(*PolicyStatusResponse)(nil),   // 12: minio.kms.PolicyStatusResponse
-	(*PolicyResponse)(nil),         // 13: minio.kms.PolicyResponse
-	(*ListPoliciesResponse)(nil),   // 14: minio.kms.ListPoliciesResponse
-	(*IdentityResponse)(nil),       // 15: minio.kms.IdentityResponse
-	(*ListIdentitiesResponse)(nil), // 16: minio.kms.ListIdentitiesResponse
-	nil,                            // 17: minio.kms.ServerStatusResponse.NodesEntry
-	nil,                            // 18: minio.kms.ClusterStatusResponse.NodesUpEntry
-	nil,                            // 19: minio.kms.ClusterStatusResponse.NodesDownEntry
-	nil,                            // 20: minio.kms.PolicyResponse.AllowEntry
-	nil,                            // 21: minio.kms.PolicyResponse.DenyEntry
-	nil,                            // 22: minio.kms.IdentityResponse.TagsEntry
+	(*ErrResponse)(nil),            // 0: swifts3.kms.ErrResponse
+	(*VersionResponse)(nil),        // 1: swifts3.kms.VersionResponse
+	(*ServerStatusResponse)(nil),   // 2: swifts3.kms.ServerStatusResponse
+	(*ProfileStatusResponse)(nil),  // 3: swifts3.kms.ProfileStatusResponse
+	(*ClusterStatusResponse)(nil),  // 4: swifts3.kms.ClusterStatusResponse
+	(*EnclaveStatusResponse)(nil),  // 5: swifts3.kms.EnclaveStatusResponse
+	(*ListEnclavesResponse)(nil),   // 6: swifts3.kms.ListEnclavesResponse
+	(*KeyStatusResponse)(nil),      // 7: swifts3.kms.KeyStatusResponse
+	(*ListKeysResponse)(nil),       // 8: swifts3.kms.ListKeysResponse
+	(*EncryptResponse)(nil),        // 9: swifts3.kms.EncryptResponse
+	(*DecryptResponse)(nil),        // 10: swifts3.kms.DecryptResponse
+	(*GenerateKeyResponse)(nil),    // 11: swifts3.kms.GenerateKeyResponse
+	(*PolicyStatusResponse)(nil),   // 12: swifts3.kms.PolicyStatusResponse
+	(*PolicyResponse)(nil),         // 13: swifts3.kms.PolicyResponse
+	(*ListPoliciesResponse)(nil),   // 14: swifts3.kms.ListPoliciesResponse
+	(*IdentityResponse)(nil),       // 15: swifts3.kms.IdentityResponse
+	(*ListIdentitiesResponse)(nil), // 16: swifts3.kms.ListIdentitiesResponse
+	nil,                            // 17: swifts3.kms.ServerStatusResponse.NodesEntry
+	nil,                            // 18: swifts3.kms.ClusterStatusResponse.NodesUpEntry
+	nil,                            // 19: swifts3.kms.ClusterStatusResponse.NodesDownEntry
+	nil,                            // 20: swifts3.kms.PolicyResponse.AllowEntry
+	nil,                            // 21: swifts3.kms.PolicyResponse.DenyEntry
+	nil,                            // 22: swifts3.kms.IdentityResponse.TagsEntry
 	(*durationpb.Duration)(nil),    // 23: google.protobuf.Duration
 	(*timestamppb.Timestamp)(nil),  // 24: google.protobuf.Timestamp
-	(*RuleSet)(nil),                // 25: minio.kms.RuleSet
+	(*RuleSet)(nil),                // 25: swifts3.kms.RuleSet
 }
 var file_response_proto_depIdxs = []int32{
-	23, // 0: minio.kms.ServerStatusResponse.UpTime:type_name -> google.protobuf.Duration
-	17, // 1: minio.kms.ServerStatusResponse.Nodes:type_name -> minio.kms.ServerStatusResponse.NodesEntry
-	23, // 2: minio.kms.ServerStatusResponse.LastHeartbeat:type_name -> google.protobuf.Duration
-	23, // 3: minio.kms.ServerStatusResponse.HeartbeatInterval:type_name -> google.protobuf.Duration
-	23, // 4: minio.kms.ServerStatusResponse.ElectionTimeout:type_name -> google.protobuf.Duration
-	24, // 5: minio.kms.ProfileStatusResponse.Started:type_name -> google.protobuf.Timestamp
-	18, // 6: minio.kms.ClusterStatusResponse.NodesUp:type_name -> minio.kms.ClusterStatusResponse.NodesUpEntry
-	19, // 7: minio.kms.ClusterStatusResponse.NodesDown:type_name -> minio.kms.ClusterStatusResponse.NodesDownEntry
-	24, // 8: minio.kms.EnclaveStatusResponse.CreatedAt:type_name -> google.protobuf.Timestamp
-	5,  // 9: minio.kms.ListEnclavesResponse.Enclaves:type_name -> minio.kms.EnclaveStatusResponse
-	24, // 10: minio.kms.KeyStatusResponse.CreatedAt:type_name -> google.protobuf.Timestamp
-	7,  // 11: minio.kms.ListKeysResponse.Keys:type_name -> minio.kms.KeyStatusResponse
-	24, // 12: minio.kms.PolicyStatusResponse.CreatedAt:type_name -> google.protobuf.Timestamp
-	20, // 13: minio.kms.PolicyResponse.Allow:type_name -> minio.kms.PolicyResponse.AllowEntry
-	21, // 14: minio.kms.PolicyResponse.Deny:type_name -> minio.kms.PolicyResponse.DenyEntry
-	24, // 15: minio.kms.PolicyResponse.CreatedAt:type_name -> google.protobuf.Timestamp
-	12, // 16: minio.kms.ListPoliciesResponse.Policies:type_name -> minio.kms.PolicyStatusResponse
-	24, // 17: minio.kms.IdentityResponse.CreatedAt:type_name -> google.protobuf.Timestamp
-	22, // 18: minio.kms.IdentityResponse.Tags:type_name -> minio.kms.IdentityResponse.TagsEntry
-	15, // 19: minio.kms.ListIdentitiesResponse.Identities:type_name -> minio.kms.IdentityResponse
-	2,  // 20: minio.kms.ClusterStatusResponse.NodesUpEntry.value:type_name -> minio.kms.ServerStatusResponse
-	25, // 21: minio.kms.PolicyResponse.AllowEntry.value:type_name -> minio.kms.RuleSet
-	25, // 22: minio.kms.PolicyResponse.DenyEntry.value:type_name -> minio.kms.RuleSet
+	23, // 0: swifts3.kms.ServerStatusResponse.UpTime:type_name -> google.protobuf.Duration
+	17, // 1: swifts3.kms.ServerStatusResponse.Nodes:type_name -> swifts3.kms.ServerStatusResponse.NodesEntry
+	23, // 2: swifts3.kms.ServerStatusResponse.LastHeartbeat:type_name -> google.protobuf.Duration
+	23, // 3: swifts3.kms.ServerStatusResponse.HeartbeatInterval:type_name -> google.protobuf.Duration
+	23, // 4: swifts3.kms.ServerStatusResponse.ElectionTimeout:type_name -> google.protobuf.Duration
+	24, // 5: swifts3.kms.ProfileStatusResponse.Started:type_name -> google.protobuf.Timestamp
+	18, // 6: swifts3.kms.ClusterStatusResponse.NodesUp:type_name -> swifts3.kms.ClusterStatusResponse.NodesUpEntry
+	19, // 7: swifts3.kms.ClusterStatusResponse.NodesDown:type_name -> swifts3.kms.ClusterStatusResponse.NodesDownEntry
+	24, // 8: swifts3.kms.EnclaveStatusResponse.CreatedAt:type_name -> google.protobuf.Timestamp
+	5,  // 9: swifts3.kms.ListEnclavesResponse.Enclaves:type_name -> swifts3.kms.EnclaveStatusResponse
+	24, // 10: swifts3.kms.KeyStatusResponse.CreatedAt:type_name -> google.protobuf.Timestamp
+	7,  // 11: swifts3.kms.ListKeysResponse.Keys:type_name -> swifts3.kms.KeyStatusResponse
+	24, // 12: swifts3.kms.PolicyStatusResponse.CreatedAt:type_name -> google.protobuf.Timestamp
+	20, // 13: swifts3.kms.PolicyResponse.Allow:type_name -> swifts3.kms.PolicyResponse.AllowEntry
+	21, // 14: swifts3.kms.PolicyResponse.Deny:type_name -> swifts3.kms.PolicyResponse.DenyEntry
+	24, // 15: swifts3.kms.PolicyResponse.CreatedAt:type_name -> google.protobuf.Timestamp
+	12, // 16: swifts3.kms.ListPoliciesResponse.Policies:type_name -> swifts3.kms.PolicyStatusResponse
+	24, // 17: swifts3.kms.IdentityResponse.CreatedAt:type_name -> google.protobuf.Timestamp
+	22, // 18: swifts3.kms.IdentityResponse.Tags:type_name -> swifts3.kms.IdentityResponse.TagsEntry
+	15, // 19: swifts3.kms.ListIdentitiesResponse.Identities:type_name -> swifts3.kms.IdentityResponse
+	2,  // 20: swifts3.kms.ClusterStatusResponse.NodesUpEntry.value:type_name -> swifts3.kms.ServerStatusResponse
+	25, // 21: swifts3.kms.PolicyResponse.AllowEntry.value:type_name -> swifts3.kms.RuleSet
+	25, // 22: swifts3.kms.PolicyResponse.DenyEntry.value:type_name -> swifts3.kms.RuleSet
 	23, // [23:23] is the sub-list for method output_type
 	23, // [23:23] is the sub-list for method input_type
 	23, // [23:23] is the sub-list for extension type_name

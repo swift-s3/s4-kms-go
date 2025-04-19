@@ -1,3 +1,5 @@
+// Copyright 2025 - Swift Software Group, Inc.
+// Before Feb 26, 2025:
 // Copyright 2023 - MinIO, Inc. All rights reserved.
 // Use of this source code is governed by the AGPLv3
 // license that can be found in the LICENSE file.
@@ -8,7 +10,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/minio/kms-go/kes"
+	"github.com/swift-s3/kms-go/kes"
 )
 
 const AuditStream = `{"time":"2023-03-24T12:37:33Z","request":{"path":"/v1/log/audit","identity":"dd46485bedc9ad2909d2e8f9017216eec4413bc5c64b236d992f7ec19c843c5f"},"response":{"code":200, "time":12106}}

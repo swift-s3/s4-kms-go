@@ -146,13 +146,13 @@ func file_rule_proto_rawDescGZIP() []byte {
 
 var file_rule_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_rule_proto_goTypes = []interface{}{
-	(*Rule)(nil),    // 0: minio.kms.Rule
-	(*RuleSet)(nil), // 1: minio.kms.RuleSet
-	nil,             // 2: minio.kms.RuleSet.RulesEntry
+	(*Rule)(nil),    // 0: swifts3.kms.Rule
+	(*RuleSet)(nil), // 1: swifts3.kms.RuleSet
+	nil,             // 2: swifts3.kms.RuleSet.RulesEntry
 }
 var file_rule_proto_depIdxs = []int32{
-	2, // 0: minio.kms.RuleSet.Rules:type_name -> minio.kms.RuleSet.RulesEntry
-	0, // 1: minio.kms.RuleSet.RulesEntry.value:type_name -> minio.kms.Rule
+	2, // 0: swifts3.kms.RuleSet.Rules:type_name -> swifts3.kms.RuleSet.RulesEntry
+	0, // 1: swifts3.kms.RuleSet.RulesEntry.value:type_name -> swifts3.kms.Rule
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name

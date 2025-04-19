@@ -9,7 +9,7 @@
 
 syntax = "proto3";
 
-package minio.kms;
+package swifts3.kms;
 
 import "google/protobuf/timestamp.proto";
 

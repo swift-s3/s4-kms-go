@@ -1,3 +1,5 @@
+// Copyright 2025 - Swift Software Group, Inc.
+// Before Feb 26, 2025:
 // Copyright 2023 - MinIO, Inc. All rights reserved.
 // Use of this source code is governed by the AGPLv3
 // license that can be found in the LICENSE file.
@@ -1610,42 +1612,42 @@ func file_request_proto_rawDescGZIP() []byte {
 
 var file_request_proto_msgTypes = make([]protoimpl.MessageInfo, 26)
 var file_request_proto_goTypes = []interface{}{
-	(*ClusterStatusRequest)(nil),     // 0: minio.kms.ClusterStatusRequest
-	(*ListRequest)(nil),              // 1: minio.kms.ListRequest
-	(*AddClusterNodeRequest)(nil),    // 2: minio.kms.AddClusterNodeRequest
-	(*RemoveClusterNodeRequest)(nil), // 3: minio.kms.RemoveClusterNodeRequest
-	(*EditClusterRequest)(nil),       // 4: minio.kms.EditClusterRequest
-	(*CreateEnclaveRequest)(nil),     // 5: minio.kms.CreateEnclaveRequest
-	(*DeleteEnclaveRequest)(nil),     // 6: minio.kms.DeleteEnclaveRequest
-	(*EnclaveStatusRequest)(nil),     // 7: minio.kms.EnclaveStatusRequest
-	(*LogRequest)(nil),               // 8: minio.kms.LogRequest
-	(*CreateKeyRequest)(nil),         // 9: minio.kms.CreateKeyRequest
-	(*ImportKeyRequest)(nil),         // 10: minio.kms.ImportKeyRequest
-	(*DeleteKeyRequest)(nil),         // 11: minio.kms.DeleteKeyRequest
-	(*KeyStatusRequest)(nil),         // 12: minio.kms.KeyStatusRequest
-	(*EncryptRequest)(nil),           // 13: minio.kms.EncryptRequest
-	(*GenerateKeyRequest)(nil),       // 14: minio.kms.GenerateKeyRequest
-	(*DecryptRequest)(nil),           // 15: minio.kms.DecryptRequest
-	(*CreatePolicyRequest)(nil),      // 16: minio.kms.CreatePolicyRequest
-	(*PolicyRequest)(nil),            // 17: minio.kms.PolicyRequest
-	(*DeletePolicyRequest)(nil),      // 18: minio.kms.DeletePolicyRequest
-	(*AssignPolicyRequest)(nil),      // 19: minio.kms.AssignPolicyRequest
-	(*CreateIdentityRequest)(nil),    // 20: minio.kms.CreateIdentityRequest
-	(*IdentityRequest)(nil),          // 21: minio.kms.IdentityRequest
-	(*DeleteIdentityRequest)(nil),    // 22: minio.kms.DeleteIdentityRequest
-	nil,                              // 23: minio.kms.CreatePolicyRequest.AllowEntry
-	nil,                              // 24: minio.kms.CreatePolicyRequest.DenyEntry
-	nil,                              // 25: minio.kms.CreateIdentityRequest.TagsEntry
+	(*ClusterStatusRequest)(nil),     // 0: swifts3.kms.ClusterStatusRequest
+	(*ListRequest)(nil),              // 1: swifts3.kms.ListRequest
+	(*AddClusterNodeRequest)(nil),    // 2: swifts3.kms.AddClusterNodeRequest
+	(*RemoveClusterNodeRequest)(nil), // 3: swifts3.kms.RemoveClusterNodeRequest
+	(*EditClusterRequest)(nil),       // 4: swifts3.kms.EditClusterRequest
+	(*CreateEnclaveRequest)(nil),     // 5: swifts3.kms.CreateEnclaveRequest
+	(*DeleteEnclaveRequest)(nil),     // 6: swifts3.kms.DeleteEnclaveRequest
+	(*EnclaveStatusRequest)(nil),     // 7: swifts3.kms.EnclaveStatusRequest
+	(*LogRequest)(nil),               // 8: swifts3.kms.LogRequest
+	(*CreateKeyRequest)(nil),         // 9: swifts3.kms.CreateKeyRequest
+	(*ImportKeyRequest)(nil),         // 10: swifts3.kms.ImportKeyRequest
+	(*DeleteKeyRequest)(nil),         // 11: swifts3.kms.DeleteKeyRequest
+	(*KeyStatusRequest)(nil),         // 12: swifts3.kms.KeyStatusRequest
+	(*EncryptRequest)(nil),           // 13: swifts3.kms.EncryptRequest
+	(*GenerateKeyRequest)(nil),       // 14: swifts3.kms.GenerateKeyRequest
+	(*DecryptRequest)(nil),           // 15: swifts3.kms.DecryptRequest
+	(*CreatePolicyRequest)(nil),      // 16: swifts3.kms.CreatePolicyRequest
+	(*PolicyRequest)(nil),            // 17: swifts3.kms.PolicyRequest
+	(*DeletePolicyRequest)(nil),      // 18: swifts3.kms.DeletePolicyRequest
+	(*AssignPolicyRequest)(nil),      // 19: swifts3.kms.AssignPolicyRequest
+	(*CreateIdentityRequest)(nil),    // 20: swifts3.kms.CreateIdentityRequest
+	(*IdentityRequest)(nil),          // 21: swifts3.kms.IdentityRequest
+	(*DeleteIdentityRequest)(nil),    // 22: swifts3.kms.DeleteIdentityRequest
+	nil,                              // 23: swifts3.kms.CreatePolicyRequest.AllowEntry
+	nil,                              // 24: swifts3.kms.CreatePolicyRequest.DenyEntry
+	nil,                              // 25: swifts3.kms.CreateIdentityRequest.TagsEntry
 	(*timestamppb.Timestamp)(nil),    // 26: google.protobuf.Timestamp
-	(*RuleSet)(nil),                  // 27: minio.kms.RuleSet
+	(*RuleSet)(nil),                  // 27: swifts3.kms.RuleSet
 }
 var file_request_proto_depIdxs = []int32{
-	26, // 0: minio.kms.LogRequest.Since:type_name -> google.protobuf.Timestamp
-	23, // 1: minio.kms.CreatePolicyRequest.Allow:type_name -> minio.kms.CreatePolicyRequest.AllowEntry
-	24, // 2: minio.kms.CreatePolicyRequest.Deny:type_name -> minio.kms.CreatePolicyRequest.DenyEntry
-	25, // 3: minio.kms.CreateIdentityRequest.Tags:type_name -> minio.kms.CreateIdentityRequest.TagsEntry
-	27, // 4: minio.kms.CreatePolicyRequest.AllowEntry.value:type_name -> minio.kms.RuleSet
-	27, // 5: minio.kms.CreatePolicyRequest.DenyEntry.value:type_name -> minio.kms.RuleSet
+	26, // 0: swifts3.kms.LogRequest.Since:type_name -> google.protobuf.Timestamp
+	23, // 1: swifts3.kms.CreatePolicyRequest.Allow:type_name -> swifts3.kms.CreatePolicyRequest.AllowEntry
+	24, // 2: swifts3.kms.CreatePolicyRequest.Deny:type_name -> swifts3.kms.CreatePolicyRequest.DenyEntry
+	25, // 3: swifts3.kms.CreateIdentityRequest.Tags:type_name -> swifts3.kms.CreateIdentityRequest.TagsEntry
+	27, // 4: swifts3.kms.CreatePolicyRequest.AllowEntry.value:type_name -> swifts3.kms.RuleSet
+	27, // 5: swifts3.kms.CreatePolicyRequest.DenyEntry.value:type_name -> swifts3.kms.RuleSet
 	6,  // [6:6] is the sub-list for method output_type
 	6,  // [6:6] is the sub-list for method input_type
 	6,  // [6:6] is the sub-list for extension type_name

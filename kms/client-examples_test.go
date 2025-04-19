@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"aead.dev/mtls"
-	"github.com/minio/kms-go/kms"
+	"github.com/swift-s3/kms-go/kms"
 )
 
 func ExampleNewClient() {
@@ -164,7 +164,7 @@ func ExampleClient_CreateEnclave() {
 	}
 
 	request := &kms.CreateEnclaveRequest{
-		Name: "minio-tenant-foo",
+		Name: "swifts3-tenant-foo",
 	}
 	if err = client.CreateEnclave(context.TODO(), request); err != nil {
 		log.Fatalf("Failed to create enclave '%s': %v", request.Name, err)
@@ -193,7 +193,7 @@ func ExampleClient_DeleteEnclave() {
 	}
 
 	request := &kms.DeleteEnclaveRequest{
-		Name: "minio-tenant-foo",
+		Name: "swifts3-tenant-foo",
 	}
 	if err = client.DeleteEnclave(context.TODO(), request); err != nil {
 		log.Fatalf("Failed to delete enclave '%s': %v", request.Name, err)
@@ -223,8 +223,8 @@ func ExampleClient_EnclaveStatus() {
 	}
 
 	requests := []*kms.EnclaveStatusRequest{
-		{Name: "minio-tenant-foo"},
-		{Name: "minio-tenant-bar"},
+		{Name: "swifts3-tenant-foo"},
+		{Name: "swifts3-tenant-bar"},
 	}
 	responses, err := client.EnclaveStatus(context.TODO(), requests...)
 	if err != nil {

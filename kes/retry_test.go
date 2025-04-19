@@ -1,3 +1,5 @@
+// Copyright 2025 - Swift Software Group, Inc.
+// Before Feb 26, 2025:
 // Copyright 2023 - MinIO, Inc. All rights reserved.
 // Use of this source code is governed by the AGPLv3
 // license that can be found in the LICENSE file.
@@ -152,12 +154,12 @@ func MockGetInterfaces() (ifs []net.Addr, err error) {
 func TestPrepareLoadBalancer(t *testing.T) {
 	Resolver := new(MockResolver)
 	Resolver.DNSRecords = make(map[string][]string)
-	Resolver.DNSRecords["minio.remote"] = []string{"1.1.1.1", "8.8.8.8"}
-	Resolver.DNSRecords["minio.remote2"] = []string{"123.121.123.13", "123.121.123.12", "123.121.123.15"}
-	Resolver.DNSRecords["minio.remote3"] = []string{"8e6e:dd85:041c:5e77:4f44:3484:c050:be7e"}
-	Resolver.DNSRecords["minio.local"] = []string{"127.0.0.1"}
-	Resolver.DNSRecords["minio.local2"] = []string{"171.171.0.10", "171.171.0.11"}
-	Resolver.DNSRecords["minio.local3"] = []string{"182.182.0.10", "182.182.0.11"}
+	Resolver.DNSRecords["swifts3.remote"] = []string{"1.1.1.1", "8.8.8.8"}
+	Resolver.DNSRecords["swifts3.remote2"] = []string{"123.121.123.13", "123.121.123.12", "123.121.123.15"}
+	Resolver.DNSRecords["swifts3.remote3"] = []string{"8e6e:dd85:041c:5e77:4f44:3484:c050:be7e"}
+	Resolver.DNSRecords["swifts3.local"] = []string{"127.0.0.1"}
+	Resolver.DNSRecords["swifts3.local2"] = []string{"171.171.0.10", "171.171.0.11"}
+	Resolver.DNSRecords["swifts3.local3"] = []string{"182.182.0.10", "182.182.0.11"}
 
 	lb := &loadBalancer{
 		enclave:          "",
@@ -165,17 +167,17 @@ func TestPrepareLoadBalancer(t *testing.T) {
 		getLocalNetworks: MockGetInterfaces,
 	}
 
-	dnsErrorEndpoint := "https://minio.404:7373"
+	dnsErrorEndpoint := "https://swifts3.404:7373"
 	endpoints := []string{
 		dnsErrorEndpoint,
 		"https://127.0.0.1:7373",
 		"https://localhost:7373",
-		"https://minio.local:7373",
-		"https://minio.local2:7373",
-		"https://minio.local3:7373",
-		"https://minio.remote:7373",
-		"https://minio.remote2:7373",
-		"https://minio.remote3:7373",
+		"https://swifts3.local:7373",
+		"https://swifts3.local2:7373",
+		"https://swifts3.local3:7373",
+		"https://swifts3.remote:7373",
+		"https://swifts3.remote2:7373",
+		"https://swifts3.remote3:7373",
 	}
 
 	lb.prepareLoadBalancer(endpoints)
@@ -207,14 +209,14 @@ func TestPrepareLoadBalancer(t *testing.T) {
 	}
 
 	if !notFoundInList {
-		t.Fatalf("minio.404 not found in list.")
+		t.Fatalf("swifts3.404 not found in list.")
 	}
 }
 
 func TestLoadBalancerSend_SingleHost(t *testing.T) {
 	Resolver := new(MockResolver)
 	Resolver.DNSRecords = make(map[string][]string)
-	Resolver.DNSRecords["minio.local"] = []string{"127.0.0.1"}
+	Resolver.DNSRecords["swifts3.local"] = []string{"127.0.0.1"}
 
 	lb := &loadBalancer{
 		enclave:          "",
@@ -230,7 +232,7 @@ func TestLoadBalancerSend_SingleHost(t *testing.T) {
 	var options []requestOption
 
 	endpoints := []string{
-		"https://minio.local:7373",
+		"https://swifts3.local:7373",
 	}
 
 	lb.prepareLoadBalancer(endpoints)
@@ -272,12 +274,12 @@ func TestLoadBalancerSend_SingleHost(t *testing.T) {
 func TestLoadBalancerSend_MultiHost(t *testing.T) {
 	Resolver := new(MockResolver)
 	Resolver.DNSRecords = make(map[string][]string)
-	Resolver.DNSRecords["minio.remote"] = []string{"1.1.1.1", "8.8.8.8"}
-	Resolver.DNSRecords["minio.remote2"] = []string{"1.1.1.1", "8.8.8.8"}
-	Resolver.DNSRecords["minio.remote3"] = []string{"1.1.1.1", "8.8.8.8"}
-	Resolver.DNSRecords["minio.remote4"] = []string{"1.1.1.1", "8.8.8.8"}
-	Resolver.DNSRecords["minio.remote5"] = []string{"123.121.123.13", "123.121.123.12", "123.121.123.15"}
-	Resolver.DNSRecords["minio.local"] = []string{"127.0.0.1"}
+	Resolver.DNSRecords["swifts3.remote"] = []string{"1.1.1.1", "8.8.8.8"}
+	Resolver.DNSRecords["swifts3.remote2"] = []string{"1.1.1.1", "8.8.8.8"}
+	Resolver.DNSRecords["swifts3.remote3"] = []string{"1.1.1.1", "8.8.8.8"}
+	Resolver.DNSRecords["swifts3.remote4"] = []string{"1.1.1.1", "8.8.8.8"}
+	Resolver.DNSRecords["swifts3.remote5"] = []string{"123.121.123.13", "123.121.123.12", "123.121.123.15"}
+	Resolver.DNSRecords["swifts3.local"] = []string{"127.0.0.1"}
 
 	lb := &loadBalancer{
 		enclave:          "",
@@ -293,12 +295,12 @@ func TestLoadBalancerSend_MultiHost(t *testing.T) {
 	var options []requestOption
 
 	endpoints := []string{
-		"https://minio.local:7373",
-		"https://minio.remote:7373",
-		"https://minio.remote2:7373",
-		"https://minio.remote3:7373",
-		"https://minio.remote4:7373",
-		"https://minio.remote5:7373",
+		"https://swifts3.local:7373",
+		"https://swifts3.remote:7373",
+		"https://swifts3.remote2:7373",
+		"https://swifts3.remote3:7373",
+		"https://swifts3.remote4:7373",
+		"https://swifts3.remote5:7373",
 	}
 	lb.prepareLoadBalancer(endpoints)
 
@@ -310,11 +312,11 @@ func TestLoadBalancerSend_MultiHost(t *testing.T) {
 	}
 
 	endpoints = []string{
-		"https://minio.remote:7373",
-		"https://minio.remote2:7373",
-		"https://minio.remote3:7373",
-		"https://minio.remote4:7373",
-		"https://minio.remote5:7373",
+		"https://swifts3.remote:7373",
+		"https://swifts3.remote2:7373",
+		"https://swifts3.remote3:7373",
+		"https://swifts3.remote4:7373",
+		"https://swifts3.remote5:7373",
 	}
 	lb.prepareLoadBalancer(endpoints)
 

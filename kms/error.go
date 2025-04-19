@@ -1,3 +1,5 @@
+// Copyright 2025 - Swift Software Group, Inc.
+// Before Feb 26, 2025:
 // Copyright 2023 - MinIO, Inc. All rights reserved.
 // Use of this source code is governed by the AGPLv3
 // license that can be found in the LICENSE file.
@@ -14,13 +16,13 @@ import (
 	"strings"
 
 	"aead.dev/mem"
-	"github.com/minio/kms-go/kms/internal/headers"
-	pb "github.com/minio/kms-go/kms/protobuf"
+	"github.com/swift-s3/kms-go/kms/internal/headers"
+	pb "github.com/swift-s3/kms-go/kms/protobuf"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )
 
-// MinIO KMS API errors.
+// SwiftS3 KMS API errors.
 var (
 	// ErrPermission is returned when the client has insufficient permissions
 	// for performing the tried operation. For example, policy associated to the
