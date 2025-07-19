@@ -1,4 +1,4 @@
-module github.com/swift-s3/kms-go/kms
+module github.com/swift-s3/s4-kms-go
 
 go 1.24.1
 

@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"aead.dev/mtls"
-	"github.com/swift-s3/kms-go/kms"
+	kms "github.com/swift-s3/s4-kms-go"
 )
 
 func ExampleNewClient() {

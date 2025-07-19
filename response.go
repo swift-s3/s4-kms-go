@@ -14,10 +14,10 @@ import (
 	"time"
 
 	"aead.dev/mtls"
-	"github.com/swift-s3/kms-go/kms/cmds"
-	"github.com/swift-s3/kms-go/kms/internal/headers"
-	"github.com/swift-s3/kms-go/kms/internal/pool"
-	pb "github.com/swift-s3/kms-go/kms/protobuf"
+	"github.com/swift-s3/s4-kms-go/cmds"
+	"github.com/swift-s3/s4-kms-go/internal/headers"
+	"github.com/swift-s3/s4-kms-go/internal/pool"
+	pb "github.com/swift-s3/s4-kms-go/protobuf"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )

@@ -11,7 +11,7 @@ import (
 	"encoding/json"
 	"slices"
 
-	pb "github.com/swift-s3/kms-go/kms/protobuf"
+	pb "github.com/swift-s3/s4-kms-go/protobuf"
 )
 
 // Rule is a policy rule allowing for more fine-grain

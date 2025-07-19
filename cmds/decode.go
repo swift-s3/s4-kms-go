@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"slices"
 
-	pb "github.com/swift-s3/kms-go/kms/protobuf"
+	pb "github.com/swift-s3/s4-kms-go/protobuf"
 	"google.golang.org/protobuf/proto"
 )
 

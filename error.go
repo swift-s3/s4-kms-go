@@ -16,8 +16,8 @@ import (
 	"strings"
 
 	"aead.dev/mem"
-	"github.com/swift-s3/kms-go/kms/internal/headers"
-	pb "github.com/swift-s3/kms-go/kms/protobuf"
+	"github.com/swift-s3/s4-kms-go/internal/headers"
+	pb "github.com/swift-s3/s4-kms-go/protobuf"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 )

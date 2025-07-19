@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"aead.dev/mtls"
-	"github.com/swift-s3/kms-go/kms/cmds"
-	pb "github.com/swift-s3/kms-go/kms/protobuf"
+	"github.com/swift-s3/s4-kms-go/cmds"
+	pb "github.com/swift-s3/s4-kms-go/protobuf"
 )
 
 // Request is a structure describing a KMS request.
