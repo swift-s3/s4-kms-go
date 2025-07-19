@@ -20,4 +20,4 @@ require (
 
 ## License
 
-Use of the KES SDK is governed by the AGPLv3 license that can be found in the [LICENSE](./LICENSE) file.
+Use of the KES SDK is governed by the Apache License v2.0 that can be found in the [LICENSE](./LICENSE) file.
